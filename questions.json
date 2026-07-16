@@ -1,0 +1,80 @@
+{
+  "welding_fundamentals": [
+    {
+      "id": 1,
+      "question": "What does WEAC stand for?",
+      "options": [
+        "Welder Entry Assessment & Certification",
+        "Welding Equipment and Accessories Certificate",
+        "World Electrical and Arc Certification",
+        "Welding Engineering and Construction"
+      ],
+      "correct_answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "question": "What is the primary purpose of a flux core in welding?",
+      "options": [
+        "To add color to the weld",
+        "To provide shielding and remove impurities",
+        "To increase the temperature of the torch",
+        "To reduce welding time"
+      ],
+      "correct_answer": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "question": "Which gas is commonly used for MIG welding?",
+      "options": [
+        "Pure argon",
+        "Pure oxygen",
+        "Argon mixed with CO2",
+        "Nitrogen"
+      ],
+      "correct_answer": 2,
+      "difficulty": "medium"
+    }
+  ],
+  "safety": [
+    {
+      "id": 4,
+      "question": "What should you always wear when welding?",
+      "options": [
+        "Safety glasses",
+        "A welding helmet with dark lens",
+        "Steel-toed boots",
+        "All of the above"
+      ],
+      "correct_answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "id": 5,
+      "question": "What is the minimum shade number for a welding helmet lens during SMAW (Stick) welding?",
+      "options": [
+        "Shade 8",
+        "Shade 10",
+        "Shade 12",
+        "Shade 14"
+      ],
+      "correct_answer": 1,
+      "difficulty": "medium"
+    }
+  ],
+  "techniques": [
+    {
+      "id": 6,
+      "question": "What does GTAW stand for?",
+      "options": [
+        "Gas Transfer Arc Welding",
+        "Gas Tungsten Arc Welding",
+        "Ground Terminal Arc Welding",
+        "General Technical Arc Welding"
+      ],
+      "correct_answer": 1,
+      "difficulty": "medium"
+    }
+  ]
+}
