@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEAC Quiz Game - Welder Certification Prep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="app">
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen">
+            <div class="container">
+                <div class="header">
+                    <h1>🔥⚒️ WEAC Quiz Game</h1>
+                    <p>Welder Entry Assessment & Certification Prep</p>
+                </div>
+
+                <div class="menu-options">
+                    <button class="btn btn-primary" onclick="startQuiz()">🎮 Start Quiz</button>
+                    <button class="btn btn-secondary" onclick="showStudyMode()">📚 Study Mode</button>
+                    <button class="btn btn-secondary" onclick="showStats()">📊 My Statistics</button>
+                </div>
+
+                <div class="features">
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>✅ 35+ Welding Questions</li>
+                        <li>✅ 5 Quiz Categories</li>
+                        <li>✅ Difficulty Levels</li>
+                        <li>✅ Progress Tracking</li>
+                        <li>✅ Mobile Friendly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Selection -->
+        <div id="category-screen" class="screen hidden">
+            <div class="container">
+                <div class="header">
+                    <h2>Select Category</h2>
+                    <button class="btn-back" onclick="goHome()">← Back</button>
+                </div>
+                <div id="categories-list" class="categories-list"></div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="container">
+                <div class="quiz-header">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress-fill"></div>
+                    </div>
+                    <p id="question-counter">Question 1 of 10</p>
+                </div>
+
+                <div class="quiz-content">
+                    <h3 id="question-text"></h3>
+                    <div id="options-container" class="options-container"></div>
+                    <div id="feedback" class="feedback hidden"></div>
+                </div>
+
+                <div class="quiz-actions">
+                    <button id="submit-btn" class="btn btn-primary" onclick="submitAnswer()" disabled>Submit Answer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen hidden">
+            <div class="container">
+                <div class="results-content">
+                    <h2>🎉 Quiz Complete!</h2>
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <p id="score-text">0 out of 0</p>
+                    <p id="performance-text"></p>
+                    <button class="btn btn-primary" onclick="goHome()">Back to Home</button>
+                    <button class="btn btn-secondary" onclick="startQuiz()">Try Again</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Study Mode Screen -->
+        <div id="study-screen" class="screen hidden">
+            <div class="container">
+                <div class="header">
+                    <h2>Study Mode</h2>
+                    <button class="btn-back" onclick="goHome()">← Back</button>
+                </div>
+
+                <div class="difficulty-selector">
+                    <h3>Select Difficulty Level:</h3>
+                    <button class="difficulty-btn" onclick="setDifficulty('easy')">🟢 Easy</button>
+                    <button class="difficulty-btn" onclick="setDifficulty('medium')">🟡 Medium</button>
+                    <button class="difficulty-btn" onclick="setDifficulty('hard')">🔴 Hard</button>
+                    <button class="difficulty-btn" onclick="setDifficulty('all')">All Levels</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Screen -->
+        <div id="stats-screen" class="screen hidden">
+            <div class="container">
+                <div class="header">
+                    <h2>My Statistics</h2>
+                    <button class="btn-back" onclick="goHome()">← Back</button>
+                </div>
+
+                <div id="stats-content" class="stats-content"></div>
+
+                <button class="btn btn-danger" onclick="resetStats()">Reset All Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
